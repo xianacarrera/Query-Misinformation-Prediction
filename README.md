@@ -11,29 +11,35 @@ En primer lugar, clonar el repositorio:
 git clone https://github.com/xianacarrera/Query-Misinformation-Prediction
 ```
 
-A continuación, crear un nuevo entorno a patir del archivo `environment.yml`. Su nombre predeterminado es `qmp`:
+A continuación, crear dos nuevos entornos a patir de los archivo `environment_qmp.yml` y `environment_qppmetrics.yml`, cuyos nombres predeterminados son `qmp` y `qppmetrics`, respectivamente:
 
 ```bash
-conda env create -f environment.yml
-# To change the environment name:
-# conda env create -f environment.yml -n new-env-name
+conda env create -f environment_qmp.yml
+# Para cambiar el nombre del entorno:
+# conda env create -f environment_qmp.yml -n nuevo-nombre
+
+conda env create -f environment_qppmetrics.yml
+# Para cambiar el nombre del entorno:
+# conda env create -f environment_qppmetrics.yml -n nuevo-nombre
 ```
 
-Por último, activar el repositorio.
+Por último, activar uno u otro entorno.
 ```bash
 conda activate qmp
-# Alternatively:
-# conda activate new-env-name
+conda activate qppmetrics
+# Alternativamente:
+# conda activate nuevo-nombre
 ```
 
 ## Uso
-
 
 Una vez completada la instalación, se pueden ejecutar:
 
 * `chatgpt.py`, para generar una puntuación de controversia para las consultas en los conjuntos de datos.
 * `qpp_metrics.py`, para ejecutar los predictores clásicos de QPP: avg IDF, max IDF, avg SCQ, max SCQ, avg ICTF y SCS sobre las consultas.
 * `query_quality_classifier.py`, para generar una predicción utilizando el score de confianza del modelo [Query Quality Classifier](https://huggingface.co/dejanseo/Query-Quality-Classifier) .
+
+Debido a las diferencias entre la versión de Python necesaria para ejecutar Pyserini con esta implementación y para ejecutar el modelo Query Quality Classifier, el programa `qpp_metrics.py` se debe ejecutar con el entorno `qppmetrics`, mientras que el resto de archivos utlizan la configuración de `qmp`.
 
 ## Recursos
 
@@ -57,19 +63,24 @@ First, clone this repository:
 git clone https://github.com/xianacarrera/Query-Misinformation-Prediction
 ```
 
-Create a new environment from the `environment.yml` file. By default, its name will be `qmp`:
+Next, create two new environments from the `environment_qmp.yml` and `environment_qppmetrics.yml` files. Their default names are `qmp` and `qppmetrics`, respectively:
 
 ```bash
-conda env create -f environment.yml
+conda env create -f environment_qmp.yml
 # To change the environment name:
-# conda env create -f environment.yml -n new-env-name
+# conda env create -f environment_qmp.yml -n new-name
+
+conda env create -f environment_qppmetrics.yml
+# To change the environment name:
+# conda env create -f environment_qppmetrics.yml -n new-name
 ```
 
-Activate the environment:
+Finally, activate the appropriate environment:
 ```bash
 conda activate qmp
+conda activate qppmetrics
 # Alternatively:
-# conda activate new-env-name
+# conda activate new-name
 ```
 
 ## Use
@@ -79,6 +90,7 @@ Once the installation has been successfully completed, run:
 * `qpp_metrics.py`, to run the classical QPP predictors avg IDF, max IDF, avg SCQ, max SCQ, avg ICTF and SCS on the queries.
 * `query_quality_classifier.py`, to produce a prediction using the confidence score of the [Query Quality Classifier](https://huggingface.co/dejanseo/Query-Quality-Classifier) model.
 
+Due to differences between the Python versions required to run Pyserini with this implementation and the Query Quality Classifier model, the `qpp_metrics.py` scrip must be executed using the qppmetrics environment, while the rest of the files use the `qmp` configuration.
 
 ## Resources
 
