@@ -1,6 +1,5 @@
 # Query-Misinformation-Prediction
 
-
 Este repositorio contiene el código, conjuntos de datos y resultados del proyecto Query Misinformation Prediction, cuyo objetivo es analizar la capacidad de diferentes técnicas para predecir la desinformación presente en resultados de búsqueda de consultas. Este estudio se puede adscribir al ámbito de Query Performance Prediction en un contexto *pre-retrieval*, es decir, donde la única información disponible para la predicción es el texto de las consultas de entrada.
 
 ## Instalación
