@@ -290,4 +290,3 @@ dependencies:
       - xxhash==3.5.0
       - yarl==1.11.1
       - zstandard==0.23.0
-prefix: /home/xiana.carrera/miniconda3/envs/tfg_local
