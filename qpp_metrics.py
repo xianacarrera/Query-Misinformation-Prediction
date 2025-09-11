@@ -264,19 +264,19 @@ fields = {
 }
 
 indexes = {
-    'misinfo-2020': '/mnt/beegfs/home/xiana.carrera/irgroup/indexes/misinfo-2020',
-    'C4-2021': '/mnt/beegfs/home/xiana.carrera/irgroup/indexes/C4',
-    'C4-2022': '/mnt/beegfs/home/xiana.carrera/irgroup/indexes/C4',
-    'CLEF': '/mnt/beegfs/home/xiana.carrera/irgroup/indexes/clueweb-b13',
-    'clef': '/mnt/beegfs/home/xiana.carrera/irgroup/indexes/clueweb-b13'
+    'misinfo-2020': 'indexes/misinfo-2020',
+    'C4-2021': 'indexes/C4',
+    'C4-2022': 'indexes/C4',
+    'CLEF': 'indexes/clueweb-b13',
+    'clef': 'indexes/clueweb-b13'
 }
 
 topics_paths = {
-    'misinfo-2020': '/mnt/beegfs/home/xiana.carrera/misinfo-2020/TREC_2020_BEIR/original-misinfo-resources-2020/topics/misinfo-2020-topics.xml',
-    'C4-2021': '/mnt/beegfs/home/xiana.carrera/C4-2021/TREC_2021_BEIR/original-misinfo-resources-2021/topics/misinfo-2021-topics.xml',
-    'C4-2022': '/mnt/beegfs/home/xiana.carrera/C4-2022/TREC_2022_BEIR/original-misinfo-resources-2022/topics/misinfo-2022-topics.xml',
-    'CLEF': '/mnt/beegfs/home/xiana.carrera/CLEF/CLEF/queries2016_corregidas.xml',
-    'clef': '/mnt/beegfs/home/xiana.carrera/CLEF/CLEF/queries2016_corregidas.xml'
+    'misinfo-2020': 'misinfo-2020/TREC_2020_BEIR/original-misinfo-resources-2020/topics/misinfo-2020-topics.xml',
+    'C4-2021': 'C4-2021/TREC_2021_BEIR/original-misinfo-resources-2021/topics/misinfo-2021-topics.xml',
+    'C4-2022': 'C4-2022/TREC_2022_BEIR/original-misinfo-resources-2022/topics/misinfo-2022-topics.xml',
+    'CLEF': 'CLEF/CLEF/queries2016_corregidas.xml',
+    'clef': 'CLEF/CLEF/queries2016_corregidas.xml'
 }
 
 
@@ -347,4 +347,4 @@ if __name__ == '__main__':
 
 
     df = pd.DataFrame.from_dict(topics_metric, orient='index', columns=cols)
-    df.to_csv(f'/mnt/beegfs/home/xiana.carrera/qpp_progs/{corpus}_{metric}_{field}.csv')
+    df.to_csv(f'qpp_progs/{corpus}_{metric}_{field}.csv')
